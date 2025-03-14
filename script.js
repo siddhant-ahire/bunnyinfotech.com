@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    const toggleButton = document.querySelector(".toggle-button");
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.remove("active");
+    toggleButton.classList.remove("active");
   }
 
   // Smooth scrolling for navigation links
@@ -51,6 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
   contactBtn.addEventListener("click", (e) => {
     e.preventDefault();
     modal.style.display = "block";
+    const toggleButton = document.querySelector(".toggle-button");
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.remove("active");
+    toggleButton.classList.remove("active");
   });
 
 

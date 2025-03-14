@@ -3,41 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>BunnyInfotech - Building Modern Web Experiences</title>
+    <meta name="title" content="BunnyInfotech - Building Modern Web Experiences">
+    <meta name="description" content="BunnyInfotech provides cutting-edge web development, SEO, and digital marketing services to help businesses grow online. Get expert solutions today!">
+    <meta name="keywords" content="BunnyInfotech, Web Development, SEO, Digital Marketing, Business Solutions, Website Design">
+    <meta name="author" content="BunnyInfotech">
+    <meta name="robots" content="index, follow"> <!-- Allows search engines to index -->
+    <meta name="theme-color" content="#fff"> <!-- Changes mobile browser UI color -->
+
+    <!-- Open Graph (OG) for Facebook & LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bunnyinfotech.com/">
+    <meta property="og:title" content="BunnyInfotech - Innovative Web Solutions">
+    <meta property="og:description" content="We offer top-tier web development, SEO, and marketing solutions to elevate your brand online.">
+    <meta property="og:image" content="https://bunnyinfotech.com/assets/banner.jpg"> <!-- Update with your actual image -->
+    
+    <!-- Twitter Card for Better Twitter Shares -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bunnyinfotech.com/">
+    <meta name="twitter:title" content="BunnyInfotech - Innovative Web Solutions">
+    <meta name="twitter:description" content="Boost your online presence with expert web development and SEO services.">
+    <meta name="twitter:image" content="https://bunnyinfotech.com/assets/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./favicon.ico">
+
+    <!-- Canonical URL (Avoid Duplicate Content Issues) -->
+    <link rel="canonical" href="https://bunnyinfotech.com/">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
   <body>
-    <!-- Mobile Menu Button -->
     <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="logo">
-        <div class="rabbit">
-          <div class="ear left"></div>
-          <div class="ear right"></div>
-          <div class="leg left"></div>
-          <div class="leg right"></div>
-          <div class="eye left"></div>
-          <div class="eye right"></div>
-          <div class="nose"></div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="logo">
+          <div class="rabbit">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+          </div>
+          <h6>BunnyInfotech</h6>
         </div>
-        <h6>BunnyInfotech</h6>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#clients">Clients</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#" id="contactBtn">Contact Us</a></li>
-      </ul>
-      <button class="toggle-button" aria-label="Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#" id="contactBtn">Contact Us</a></li>
+        </ul>
+        <button class="toggle-button" aria-label="Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
 
     <!-- Main Container -->
     <div class="container">
@@ -87,78 +119,18 @@
           <div class="team-cards">
             <div class="team-card">
               <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Alice Johnson"
+                src="/assets/images/bunnyinfotech/employee//siddhant.jpg"
+                alt="Siddhant Ahire Profile Picture"
+                loading="lazy"
               />
-              <h3>Alice</h3>
-              <p>Project Manager</p>
+              <h3>Siddhant Ahire
+                <a href="https://www.linkedin.com/in/siddhant-ahire" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0077b5">
+                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.75c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zm15.11 12.7h-3.56v-5.56c0-1.32-.03-3.02-1.84-3.02-1.84 0-2.12 1.43-2.12 2.92v5.66h-3.56V9h3.42v1.57h.05c.48-.9 1.66-1.84 3.42-1.84 3.66 0 4.34 2.41 4.34 5.56v6.15z"/>
+                    </svg>
+                </a></h3>
+              <p>Tech Lead</p>
             </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Bob Smith"
-              />
-              <h3>Bob Smith</h3>
-              <p>Lead Developer</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Clara Lee"
-              />
-              <h3>Clara Lee</h3>
-              <p>UI/UX Designer</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Alice Johnson"
-              />
-              <h3>Alice</h3>
-              <p>Project Manager</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Bob Smith"
-              />
-              <h3>Bob Smith</h3>
-              <p>Lead Developer</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Clara Lee"
-              />
-              <h3>Clara Lee</h3>
-              <p>UI/UX Designer</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Alice Johnson"
-              />
-              <h3>Alice</h3>
-              <p>Project Manager</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Bob Smith"
-              />
-              <h3>Bob Smith</h3>
-              <p>Lead Developer</p>
-            </div>
-            <div class="team-card">
-              <img
-                src="https://fastly.picsum.photos/id/830/200/200.jpg?hmac=3ce7zNUn5yg_XKy7dHgIHta7t_0vghPQnAGUSGJuBZE"
-                alt="Clara Lee"
-              />
-              <h3>Clara Lee</h3>
-              <p>UI/UX Designer</p>
-            </div>
-            <!-- Add more cards as needed -->
-          </div>
         </div>
       </section>
 
@@ -224,7 +196,7 @@
           <div class="pricing-card">
             <div class="pricing-header">
               <h3>Starter Plan</h3>
-              <p style="font-size: x-small;">(Best for Individuals)</p>
+              <p style="font-size: x-small">(Best for Individuals)</p>
               <p class="price">$79</p>
             </div>
             <ul class="pricing-features">
@@ -250,7 +222,7 @@
           <div class="pricing-card">
             <div class="pricing-header">
               <h3>Basic Plan</h3>
-              <p style="font-size: x-small;">(Best for Small Businesses)</p>
+              <p style="font-size: x-small">(Best for Small Businesses)</p>
               <p class="price">$149</p>
             </div>
             <ul class="pricing-features">
@@ -277,7 +249,7 @@
             <div class="popular-label">Most Popular</div>
             <div class="pricing-header">
               <h3>Standard Plan</h3>
-              <p style="font-size: x-small;">(Best for Businesses)</p>
+              <p style="font-size: x-small">(Best for Businesses)</p>
               <p class="price">$199</p>
             </div>
             <ul class="pricing-features">
@@ -303,7 +275,7 @@
           <div class="pricing-card">
             <div class="pricing-header">
               <h3>Premium Plan</h3>
-              <p style="font-size: x-small;">(Best for Businesses)</p>
+              <p style="font-size: x-small">(Best for Businesses)</p>
               <p class="price">$300+</p>
             </div>
             <ul class="pricing-features">
@@ -312,15 +284,15 @@
               <li>Domain & Hosting Integration</li>
               <li>Advanced SEO</li>
               <li>Digital Marketing</li>
-              <div class="more-content hidden">
               <li>Google Ads & Analytics Setup</li>
               <li>Speed Optimization</li>
               <li>CMS Dashboard ($19/month)</li>
-              <li>Custom Features</li>
-              <li>Contact Us Integration</li>
-              <li>Delivery in 7-10 Days</li>
-              <li>Unlimited Free Revision</li>
-              <li>Lifetime Support</li>
+              <div class="more-content hidden">
+                <li>Custom Features</li>
+                <li>Contact Us Integration</li>
+                <li>Delivery in 7-10 Days</li>
+                <li>Unlimited Free Revision</li>
+                <li>Lifetime Support</li>
               </div>
             </ul>
             <button class="read-more-btn">Read More</button>
@@ -335,7 +307,9 @@
           <div class="pricing-card popular">
             <div class="pricing-header">
               <h3>Enterprise Plan</h3>
-              <p style="font-size: x-small;">(Best for Organizations & Enterprises)</p>
+              <p style="font-size: x-small">
+                (Best for Organizations & Enterprises)
+              </p>
               <p class="price">$500+</p>
             </div>
             <ul class="pricing-features">
@@ -343,21 +317,19 @@
               <li>Unlimited Pages & User Roles</li>
               <li>Mobile & Tablet Responsive</li>
               <li>Secure Login System (Admin, Staff, Users)</li>
-              <div class="more-content hidden">
-
               <li>Database Integration (MySQL/PostgreSQL/MongoDB)</li>
-              <li>Advanced SEO & Performance Optimization</li>
-              <li>Real-time Notifications & Email Integration</li>
-              <li>Payment Gateway Integration</li>
-              <li>Employee/Student Management Dashboard</li>
-              <li>Attendance & Payroll Management</li>
-              <li>Live Chat & Support System</li>
-              <li>Google Ads & Analytics Setup</li>
-              <li>Dedicated Server Deployment</li>
-              <li>Delivery in 15-20 Days</li>
-              <li>Lifetime Support</li>
-            </div>
-
+              <div class="more-content hidden">
+                <li>Advanced SEO & Performance Optimization</li>
+                <li>Real-time Notifications & Email Integration</li>
+                <li>Payment Gateway Integration</li>
+                <li>Employee/Student Management Dashboard</li>
+                <li>Attendance & Payroll Management</li>
+                <li>Live Chat & Support System</li>
+                <li>Google Ads & Analytics Setup</li>
+                <li>Dedicated Server Deployment</li>
+                <li>Delivery in 15-20 Days</li>
+                <li>Lifetime Support</li>
+              </div>
             </ul>
             <button class="read-more-btn">Read More</button>
             <h4>📌 Add-ons:</h4>
@@ -368,7 +340,6 @@
             </ul>
             <div class="popular-label">Most Advanced</div>
           </div>
-          
         </div>
       </section>
 
@@ -378,35 +349,21 @@
         <div class="grid">
           <div class="card">
             <img
-              src="https://via.placeholder.com/300x200.png?text=E-commerce"
-              alt="E-commerce Website"
+              src="/assets/images/entech_solutions/home_page.png"
+              alt="Entech Solutions Home Page"
+              loading="lazy"
             />
-            <h3 class="card-title">E-commerce Website</h3>
+            <h3 class="card-title">
+              <a href="https://entechsolutions.co.in/" target="_blank"
+                >Entech Solutions</a
+              >
+            </h3>
             <p class="card-text">
-              A fully functional e-commerce site with shopping cart, product
-              catalog, and secure payment integration.
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200.png?text=Portfolio"
-              alt="Portfolio Website"
-            />
-            <h3 class="card-title">Portfolio Website</h3>
-            <p class="card-text">
-              A modern portfolio site showcasing projects, skills, and
-              testimonials with a clean design.
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="https://via.placeholder.com/300x200.png?text=Social+Media"
-              alt="Social Media App"
-            />
-            <h3 class="card-title">Social Media App</h3>
-            <p class="card-text">
-              A dynamic social media platform with real-time chat, friend
-              networks, and engaging user interactions.
+              Entech Solutions is a modern, fully responsive portfolio website
+              for businesses to showcase their work effortlessly. It includes an
+              easy-to-use CMS for quick content updates without technical
+              skills. Built with the latest web technologies, it offers a fast,
+              smooth, and visually stunning experience
             </p>
           </div>
         </div>
@@ -415,27 +372,15 @@
       <!-- Clients Section -->
       <section id="clients" class="section">
         <h2>Clients</h2>
-        <div class="grid">
-          <div class="card client-card">
-            <img
-              src="https://via.placeholder.com/150?text=Tech+Corp"
-              alt="Tech Corp"
-            />
-            <h3 class="card-title">Tech Corp</h3>
-          </div>
-          <div class="card client-card">
-            <img
-              src="https://via.placeholder.com/150?text=Design+Studio"
-              alt="Design Studio"
-            />
-            <h3 class="card-title">Design Studio</h3>
-          </div>
-          <div class="card client-card">
-            <img
-              src="https://via.placeholder.com/150?text=Innovate+Inc"
-              alt="Innovate Inc"
-            />
-            <h3 class="card-title">Innovate Inc</h3>
+        <div class="client-container">
+          <div class="client-card">
+            <a>
+              <img
+                src="/assets/images/entech_solutions/logo.png"
+                alt="Entech Solutions"
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -445,32 +390,17 @@
         <h2>Testimonials</h2>
         <div class="grid">
           <div class="card testimonial-card">
-            <img
-              src="https://via.placeholder.com/80?text=AJ"
-              alt="Alice Johnson"
-            />
-            <h3 class="card-title">Alice Johnson</h3>
+            <!-- <img
+              src="/assets/images/entech_solutions/logo.png"
+              alt="Vinod Inker"
+              loading="lazy"
+            /> -->
+            <h3 class="card-title">Vinod Inker <br><span style="font-size: 0.8rem;">Manager, Entech Solutions</span></h3>
             <p class="card-text">
-              "An exceptional developer with a keen eye for design. Truly
-              impressed with the work!"
-            </p>
-          </div>
-          <div class="card testimonial-card">
-            <img src="https://via.placeholder.com/80?text=BS" alt="Bob Smith" />
-            <h3 class="card-title">Bob Smith</h3>
-            <p class="card-text">
-              "Delivered outstanding results on time. Highly recommended!"
-            </p>
-          </div>
-          <div class="card testimonial-card">
-            <img
-              src="https://via.placeholder.com/80?text=CL"
-              alt="Catherine Lee"
-            />
-            <h3 class="card-title">Catherine Lee</h3>
-            <p class="card-text">
-              "A great professional who understands the needs of the business.
-              Fantastic job."
+              "BunnyInfotech made managing our portfolio effortless! The
+              website is fast, modern, and looks amazing on any device. The CMS
+              is so easy to use that we can update content quickly without
+              any tech expertise."
             </p>
           </div>
         </div>
@@ -498,6 +428,7 @@
               </svg>
               Email</a
             >
+            <p>bunnyinfotech25gmail.com</p>
           </li>
           <li>
             <a href="tel:+917021918368"
@@ -515,6 +446,7 @@
               </svg>
               Phone</a
             >
+            <p>+91 7021918368</p>
           </li>
           <li>
             <a href="https://wa.me/917021918368" target="_blank"
@@ -532,14 +464,15 @@
               </svg>
               WhatsApp</a
             >
+            <p>+91 7021918368</p>
           </li>
         </ul>
       </div>
     </div>
     <!-- Footer Section -->
     <footer class="footer">
-      <p>© 2025 My Portfolio. All Rights Reserved.</p>
-      <ul class="social-links">
+      <p>© 2025 BunnyInfotech | All Rights Reserved.</p>
+      <!-- <ul class="social-links">
         <li>
           <a
             href="https://www.twitter.com"
@@ -564,9 +497,23 @@
             >GitHub</a
           >
         </li>
-      </ul>
+      </ul> -->
     </footer>
 
     <script src="script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BunnyInfotech",
+        "url": "https://bunnyinfotech.com",
+        "logo": "https://bunnyinfotech.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 7021918368",
+          "contactType": "customer service"
+        }
+      }
+      </script>
   </body>
 </html>
