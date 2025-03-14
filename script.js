@@ -94,5 +94,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   typeWriter();
-
+  document.querySelectorAll(".pricing-card").forEach((card) => {
+    console.log(card);
+    const readMoreBtn = card.querySelector(".read-more-btn");
+    const moreContent = card.querySelector(".more-content");
+    if(readMoreBtn){
+      readMoreBtn.addEventListener("click", function () {
+        if (moreContent.classList.contains("hidden")) {
+          moreContent.classList.remove("hidden");
+          readMoreBtn.textContent = "Read Less";
+        } else {
+          moreContent.classList.add("hidden");
+          readMoreBtn.textContent = "Read More";
+        }
+      });
+    }
+  });
 });

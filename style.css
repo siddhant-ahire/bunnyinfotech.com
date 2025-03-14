@@ -509,8 +509,8 @@
 
 .about-text {
   flex: 1 1 500px;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 0.95rem;
+  color: var(--text-color);
 }
 
 .about-text h2 {
@@ -622,29 +622,29 @@
   color: #555;
 }
 
-
 /* Pricing Section Styles */
 .pricing-section {
-  padding: 60px 20px;
+  padding: 50px 15px;
   text-align: center;
 }
 
 .pricing-section h2 {
   color: var(--primary-color);
+  font-size: 1.8rem;
 }
 
 /* Horizontally Scrollable Container */
 .pricing-container {
   display: flex;
   overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
+  gap: 15px;
+  padding-bottom: 8px;
   scroll-behavior: smooth;
 }
 
 /* Optional: Style the scrollbar for WebKit browsers */
 .pricing-container::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 
 .pricing-container::-webkit-scrollbar-track {
@@ -659,51 +659,71 @@
 /* Pricing Card Styles */
 .pricing-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  padding: 30px 20px;
-  width: 300px;
-  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  width: 250px; /* Reduced width */
+  margin-top: 20px;
   border: 1px solid var(--primary-color);
-  flex-shrink: 0; /* Prevent cards from shrinking */
+  flex-shrink: 0;
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Header */
 .pricing-header h3 {
   color: var(--primary-color);
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
+/* Price */
 .price {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
   color: #333;
 }
 
 .price span {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #777;
 }
 
+/* Features */
 .pricing-features {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .pricing-features li {
-  font-size: 1rem;
-  padding: 8px 0;
+  font-size: 0.85rem;
+  padding: 6px 0;
   border-bottom: 1px dashed #ddd;
 }
 
 .pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features-addons {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.pricing-features-addons li {
+  font-size: 0.7rem;
+  padding: 2px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.pricing-features-addons li:last-child {
   border-bottom: none;
 }
 
@@ -713,8 +733,9 @@
   display: inline-block;
   background: var(--primary-color);
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 20px;
   transition: background 0.3s;
 }
 
@@ -729,12 +750,26 @@
 
 .popular-label {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -8px;
+  right: -8px;
   background: var(--primary-color);
   color: #fff;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  border-radius: 4px;
   text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.read-more-btn {
+  color: var(--text-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s;
 }
