@@ -1,121 +1,149 @@
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".nav-links a");
-  const sections = document.querySelectorAll("section"); // Adjust selector if needed
-
-  // Function to handle scroll-based active link switching
-  function updateActiveLinkOnScroll() {
-    let scrollPosition = window.scrollY + 160; // Adjust offset as needed
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute("id");
-      const correspondingLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        links.forEach((link) => link.classList.remove("active"));
-        if (correspondingLink) {
-          correspondingLink.classList.add("active");
-        }
-      }
-    });
-    const toggleButton = document.querySelector(".toggle-button");
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.remove("active");
-    toggleButton.classList.remove("active");
-  }
-
-  // Smooth scrolling for navigation links
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      history.pushState(null, "", this.getAttribute("href"));
-      const targetId = this.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 50, // Adjust offset as needed
-          behavior: "smooth",
-        });
-      }
-    });
-  });
-
-  // Listen for scroll events
-  window.addEventListener("scroll", updateActiveLinkOnScroll);
-  updateActiveLinkOnScroll(); // Run initially to set the correct active link on page load
-
-  // Contact modal handling
-  const contactBtn = document.getElementById("contactBtn");
-  const contactBtn2 = document.getElementById("contactBtn2");
-  const modal = document.getElementById("contactModal");
-  const closeBtn = modal.querySelector(".close");
-
-  contactBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.style.display = "block";
-    const toggleButton = document.querySelector(".toggle-button");
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.remove("active");
-    toggleButton.classList.remove("active");
-  });
-
-
-  contactBtn2.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.style.display = "block";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-
-  // Mobile navigation toggle
+  const sections = document.querySelectorAll("section");
   const toggleButton = document.querySelector(".toggle-button");
   const navLinks = document.querySelector(".nav-links");
+  const modal = document.getElementById("contactModal");
+  const contactBtns = document.querySelectorAll("#contactBtn, #contactBtn2");
+  const closeBtn = modal.querySelector(".close");
+  const tagline = document.querySelector(".hero-tagline");
+  const pricingCards = document.querySelectorAll(".pricing-card");
 
-  toggleButton.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    toggleButton.classList.toggle("active");
-  });
-  const tagline = document.querySelector('.hero-tagline');
-  const fullText = tagline.textContent; // e.g., "Building Modern Web Experiences"
-  tagline.textContent = "";
-  let index = 0;
-  const speed = 100; // Adjust speed in milliseconds
+  let ticking = false; // Used for optimizing scroll event handling
 
-  function typeWriter() {
-    if (index < fullText.length) {
-      tagline.textContent += fullText.charAt(index);
-      index++;
-      setTimeout(typeWriter, speed);
-    } else {
-      // Remove the blinking cursor once finished (optional)
-      tagline.style.borderRight = 'none';
+  /** 
+   * Updates the active navigation link based on scroll position.
+   */
+  function updateActiveLinkOnScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        let scrollPosition = window.scrollY + 160;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+          const correspondingLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            links.forEach((link) => link.classList.remove("active"));
+            if (correspondingLink) {
+              correspondingLink.classList.add("active");
+            }
+          }
+        });
+
+        // Close mobile navigation menu on scroll
+        navLinks.classList.remove("active");
+        toggleButton.classList.remove("active");
+
+        ticking = false;
+      });
+
+      ticking = true;
     }
   }
-  typeWriter();
-  document.querySelectorAll(".pricing-card").forEach((card) => {
-    console.log(card);
-    const readMoreBtn = card.querySelector(".read-more-btn");
-    const moreContent = card.querySelector(".more-content");
-    if(readMoreBtn){
-      readMoreBtn.addEventListener("click", function () {
-        if (moreContent.classList.contains("hidden")) {
-          moreContent.classList.remove("hidden");
-          readMoreBtn.textContent = "Read Less";
-        } else {
-          moreContent.classList.add("hidden");
-          readMoreBtn.textContent = "Read More";
-        }
+
+  /**
+   * Handles smooth scrolling for navigation links.
+   */
+  function smoothScroll(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 50,
+        behavior: "smooth",
       });
     }
+  }
+
+  /**
+   * Toggles the mobile navigation menu.
+   */
+  function toggleNav() {
+    navLinks.classList.toggle("active");
+    toggleButton.classList.toggle("active");
+  }
+
+  /**
+   * Shows the contact modal.
+   */
+  function showModal(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+    navLinks.classList.remove("active");
+    toggleButton.classList.remove("active");
+  }
+
+  /**
+   * Closes the contact modal.
+   */
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  /**
+   * Closes the modal when clicking outside of it.
+   */
+  function handleOutsideClick(e) {
+    if (e.target === modal) closeModal();
+  }
+
+  /**
+   * Implements typewriter effect for hero tagline.
+   */
+  function typeWriterEffect() {
+    const fullText = tagline.textContent;
+    tagline.textContent = "";
+    let index = 0;
+    const speed = 100;
+
+    function typeWriter() {
+      if (index < fullText.length) {
+        tagline.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      } else {
+        tagline.style.borderRight = "none";
+      }
+    }
+
+    typeWriter();
+  }
+
+  /**
+   * Handles "Read More" toggle for pricing cards.
+   */
+  function toggleReadMore(e) {
+    const card = e.currentTarget.closest(".pricing-card");
+    const moreContent = card.querySelector(".more-content");
+    const readMoreBtn = card.querySelector(".read-more-btn");
+
+    if (moreContent.classList.contains("hidden")) {
+      moreContent.classList.remove("hidden");
+      readMoreBtn.textContent = "Read Less";
+    } else {
+      moreContent.classList.add("hidden");
+      readMoreBtn.textContent = "Read More";
+    }
+  }
+
+  // Event Listeners
+  links.forEach((link) => link.addEventListener("click", smoothScroll));
+  window.addEventListener("scroll", updateActiveLinkOnScroll);
+  toggleButton.addEventListener("click", toggleNav);
+  contactBtns.forEach((btn) => btn.addEventListener("click", showModal));
+  closeBtn.addEventListener("click", closeModal);
+  window.addEventListener("click", handleOutsideClick);
+  pricingCards.forEach((card) => {
+    const readMoreBtn = card.querySelector(".read-more-btn");
+    if (readMoreBtn) readMoreBtn.addEventListener("click", toggleReadMore);
   });
+
+  // Initial function calls
+  updateActiveLinkOnScroll(); // Ensure active link is set on page load
+  typeWriterEffect();
 });

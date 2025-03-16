@@ -1,0 +1,26 @@
+<svg width="50" height="50" viewBox="-5 -20 40 45" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rabbit Body (approximated with a rectangle with rounded corners) -->
+  <rect x="0" y="0" width="30" height="15" fill="#fff" rx="7.5" />
+  
+  <!-- Rabbit Ears -->
+  <!-- Left Ear: positioned at (2, -15) with size 10×20, rotated -30° about its center (7, -5) -->
+  <rect x="2" y="-15" width="10" height="20" fill="#fff" rx="5"
+        transform="rotate(-30,7,-5)" />
+  <!-- Right Ear: positioned at (18, -15) with size 10×20, rotated 30° about its center (23,-5) -->
+  <rect x="18" y="-15" width="10" height="20" fill="#fff" rx="5"
+        transform="rotate(30,23,-5)" />
+  
+  <!-- Rabbit Legs -->
+  <!-- Legs are placed so their bottom extends 5px beyond the 15px-high body -->
+  <rect x="5" y="10" width="5" height="10" fill="#fff" rx="3" />
+  <rect x="20" y="10" width="5" height="10" fill="#fff" rx="3" />
+  
+  <!-- Rabbit Eyes -->
+  <!-- Eyes are circles of diameter 3px -->
+  <circle cx="8.5" cy="4.5" r="1.5" fill="#000" />
+  <circle cx="21.5" cy="4.5" r="1.5" fill="#000" />
+  
+  <!-- Rabbit Nose -->
+  <!-- Nose is a 5×5 circle (diameter 5px) -->
+  <circle cx="15.5" cy="8.5" r="2.5" fill="#ff69b4" />
+</svg>
